@@ -5,6 +5,11 @@
 - [hand wire](https://geekhack.org/index.php?topic=87689.0)
 - [zmk setup](https://zmk.dev/docs/user-setup)
 - [zmk custom](https://zmk.dev/docs/customization)
+- [halcyon kyria docs](https://docs.splitkb.com/product-guides/halcyon-series/schematics/halcyon-kyria)
+
+## Infos
+
+- [zmk kyria](https://github.com/zmkfirmware/zmk/tree/main/app/boards/shields/kyria)
 
 ## Stuffs
 
