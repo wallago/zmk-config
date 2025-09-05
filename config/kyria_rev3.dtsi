@@ -1,4 +1,4 @@
-#include "kyria_common.dtsi"
+#include <boards/shields/kyria/kyria_common.dtsi>
 
 &splitkb_kyria_6col_layout {
     transform = <&default_transform>;
