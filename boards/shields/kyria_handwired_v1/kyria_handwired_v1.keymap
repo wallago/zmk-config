@@ -36,7 +36,7 @@
     &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &trans &trans &trans &trans &trans &trans
     &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
                          &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
-            >;sjkljkjasdffffff
+            >;
         };
         raise_layer {
           bindings = <
