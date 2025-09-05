@@ -1,9 +1,5 @@
 #include "./kyria_handwired_v1.dtsi"
 
-&default_transform {
-    col-offset = <7>;
-};
-
 &kscan0 {
     row-gpios
     = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
