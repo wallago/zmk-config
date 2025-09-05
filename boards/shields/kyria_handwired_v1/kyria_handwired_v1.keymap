@@ -45,5 +45,6 @@
     &trans &trans &trans &trans    &trans    &trans &trans &trans        &trans     &trans  &trans   &trans   &trans &trans    &trans &trans
                          &trans    &trans    &trans &trans &trans        &kp LPAR &kp RPAR  &trans   &trans   &trans &trans
           >;
+        };
     };
 };
