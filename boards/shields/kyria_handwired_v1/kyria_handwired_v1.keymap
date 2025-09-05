@@ -21,11 +21,9 @@
             bindings = <
     &kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
     &kp TAB   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &mo 1    &kp LSHFT  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT   &mo 2          &mo 1    &kp LSHFT  &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
                      &kp LGUI &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
         function_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -39,8 +37,13 @@
     &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
                          &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
+        num_layer {
+          bindings = <
+    &trans &kp N1 &kp N2 &kp N3   &kp N4  &kp N5                                    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+    &trans &trans &trans &kp MINS &kp EQL &trans                                    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+    &trans &trans &trans &trans   &trans  &trans &trans &trans        &trans &trans &trans   &trans   &trans &trans    &trans &trans
+                         &trans   &trans  &trans &trans &trans        &trans &trans &trans   &trans   &trans
+          >;
     };
 };
