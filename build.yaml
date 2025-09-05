@@ -17,9 +17,12 @@
 #     cmake-args: -DCONFIG_ZMK_STUDIO=y
 #     artifact-name: corne_left_with_studio
 #
----
 include:
   - board: nice_nano_v2
     shield: kyria_rev3_left
   - board: nice_nano_v2
     shield: kyria_rev3_right
+  - board: nice_nano_v2
+    shield: kyria_handwired_v1_left
+  - board: nice_nano_v2
+    shield: kyria_handwired_v1_right
