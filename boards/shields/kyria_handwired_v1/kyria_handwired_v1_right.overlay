@@ -1,7 +1,7 @@
 #include "./kyria_handwired_v1.dtsi"
 
 &default_transform {
-    col-offset = <7>;
+    col-offset = <8>;
 };
 
 &kscan0 {
@@ -21,4 +21,18 @@
     , <&pro_micro 8 GPIO_ACTIVE_HIGH>
     , <&pro_micro 10 GPIO_ACTIVE_HIGH>
     ;
+};
+
+/ {
+    leds {
+        compatible = "gpio-leds";
+        status_led: status_led {
+            gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+            label = "Status LED";
+        };
+    };
+    status_led_device: status_led_device {
+        compatible = "zmk,status-led";
+        led = <&status_led>;
+    };
 };
