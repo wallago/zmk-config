@@ -1,20 +1,10 @@
 if SHIELD_KYRIA_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Kyria"
+    default "Kyria HW v1"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
-
-endif
-
-if SHIELD_KYRIA_RIGHT
-
-config ZMK_KEYBOARD_NAME
-    default "Kyria"
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
 
 endif
 
@@ -46,6 +36,7 @@ config LV_Z_BITS_PER_PIXEL
 
 choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
+
 endchoice
 
 endif # LVGL
