@@ -1,4 +1,4 @@
-#include "./kyria_handwired_v1.dtsi"
+#include "./kyria_handwire_v1.dtsi"
 
 &default_transform {
     col-offset = <8>;
