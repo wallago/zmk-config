@@ -1,10 +1,5 @@
-config SHIELD_KYRIA
-    bool
-
 config SHIELD_KYRIA_LEFT
     def_bool $(shields_list_contains,kyria_handwire_v1_left)
-    select SHIELD_KYRIA
 
 config SHIELD_KYRIA_RIGHT
     def_bool $(shields_list_contains,kyria_handwire_v1_right)
-    select SHIELD_KYRIA

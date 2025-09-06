@@ -5,7 +5,6 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-
 #include "./kyria-layouts.dtsi"
 
 / {
@@ -18,20 +17,7 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
-
         diode-direction = "col2row";
-    };
-
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        steps = <80>;
-        status = "disabled";
-    };
-
-    right_encoder: encoder_right {
-        compatible = "alps,ec11";
-        steps = <80>;
-        status = "disabled";
     };
 
     sensors: sensors {
@@ -39,8 +25,6 @@
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
     };
-
-    // TODO: RGB node(s)
 };
 
 &pro_micro_i2c {
