@@ -1,7 +1,7 @@
 #include "./try_02.dtsi"
 
 &default_transform {
-    col-offset = <6>;
+    col-offset = <5>;
 };
 
 &kscan0 {
@@ -12,10 +12,10 @@
     , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
     ;
     col-gpios
-    = <&pro_micro 16 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 10 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 4 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 5 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 6 GPIO_ACTIVE_HIGH>
+    = <&pro_micro 6 GPIO_ACTIVE_HIGH>   // Column 4 (rightmost)
+    , <&pro_micro 5 GPIO_ACTIVE_HIGH>   // Column 3
+    , <&pro_micro 4 GPIO_ACTIVE_HIGH>   // Column 2
+    , <&pro_micro 10 GPIO_ACTIVE_HIGH>  // Column 1
+    , <&pro_micro 16 GPIO_ACTIVE_HIGH>  // Column 0 (leftmost)
     ;
 };
