@@ -26,7 +26,7 @@
     &kp LBKT  &kp N7 &kp N8   &kp N9 &kp RBKT  &kp LBRC  &kp AMPS &kp STAR  &kp LPAR  &kp RBRC
     &kp SEMI  &kp N4 &kp N5   &kp N6 &kp EQUAL &kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS
     &kp GRAVE &kp N1 &kp N2   &kp N3 &kp BSLH  &kp TILDE &kp EXCL &kp AT    &kp HASH  &kp PIPE
-                     &kp LBAR &kp N0 &kp RBAR  &trans    &trans   &trans    &trans
+                     &kp LPAR &kp N0 &kp RPAR  &trans    &trans   &trans    &trans
           >;
         };
     };
