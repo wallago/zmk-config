@@ -17,7 +17,7 @@
         nav_layer {
             bindings = <
     &kp C_AC_REDO &kp C_AC_PASTE &kp C_AC_COPY &kp C_AC_CUT &kp C_AC_UNDO &trans    &kp C_AC_HOME &kp UP &kp END   &kp PG_UP
-    &kp LGUI      &kp LALT       &kp LCTRL     &kp LSHFT    &trans        &kp CAPS  &kp LEFT  &kp DOWN   &kp RIGHT &kp PG_DOWN
+    &kp LGUI      &kp LALT       &kp LCTRL     &kp LSHFT    &trans        &kp CAPS  &kp LEFT  &kp DOWN   &kp RIGHT &kp PG_DN
     &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3  &kp INS   &trans    &trans     &trans    &trans
             >;
         };
