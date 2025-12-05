@@ -13,22 +13,20 @@
 #define BTH   7
 #define EXTRA 8
 
-&mt {
-    tapping-term-ms = <200>;
-    quick-tap-ms = <0>;
-    flavor = "tap-preferred";
-};
-
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+    combos {
+        compatible = "zmk,combos";
+        combo_extra {
+            timeout-ms = <50>;
+            key-positions = <33 36>;
+            bindings = <&to EXTRA>;
+            layers = <BASE>;
+        };
+        combo_exit_extra {
+          timeout-ms = <50>;
+          key-positions = <33 36>;
+          bindings = <&to BASE>;
+          layers = <EXTRA>;
         };
     };
     keymap {
