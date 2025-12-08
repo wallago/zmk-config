@@ -16,6 +16,30 @@
 / {
     combos {
         compatible = "zmk,combos";
+        combo_bth {
+            timeout-ms = <50>;
+            key-positions = <32 35>;
+            bindings = <&to BTH>;
+            layers = <BASE>;
+        };
+        combo_exit_bth {
+          timeout-ms = <50>;
+          key-positions = <32 35>;
+          bindings = <&to BASE>;
+          layers = <BTH>;
+        };
+        combo_boot {
+            timeout-ms = <50>;
+            key-positions = <34 37>;
+            bindings = <&to BOOT>;
+            layers = <BASE>;
+        };
+        combo_exit_boot {
+          timeout-ms = <50>;
+          key-positions = <34 37>;
+          bindings = <&to BASE>;
+          layers = <BOOT>;
+        };
         combo_extra {
             timeout-ms = <50>;
             key-positions = <33 36>;
@@ -89,7 +113,7 @@
           label = "FUN";
           bindings = <
             &kp F12 &kp F7 &kp F8    &kp F9  &kp PRINTSCREEN &none   &to BASE   &none     &none    &none
-            &kp F11 &kp F4 &kp F5    &kp F6  &kp SLCK        &to BTH &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
+            &kp F11 &kp F4 &kp F5    &kp F6  &kp SLCK        &none   &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
             &kp F10 &kp F1 &kp F2    &kp F3  &kp PAUSE_BREAK &none   &none      &none     &none    &none
                            &kp K_APP &kp SPC &kp TAB         &none   &none      &none
           >;
@@ -97,10 +121,19 @@
         bth_layer {
           label = "BTH";
           bindings = <
-            &bt BT_CLR &none        &none        &to BASE     &none        &none  &to BASE &none       &none &none
-            &none      &none        &none        &none        &none        &none  &none    &none       &none &none
-            &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none  &none    &none       &none &none
-                                    &bootloader  &bt BT_PRV   &bt BT_NXT   &none  &none    &bootloader
+            &bt BT_CLR &none        &none        &none        &none        &none  &none &none &none &none
+            &none      &none        &none        &none        &none        &none  &none &none &none &none
+            &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none  &none &none &none &none
+                                    &none        &bt BT_PRV   &bt BT_NXT   &none  &none &none
+          >;
+        };
+        boot_layer {
+          label = "BOOT";
+          bindings = <
+            &bootloader &none &none &none &none &bootloader &none &none &none &none
+            &none       &none &none &none &none &none       &none &none &none &none
+            &none       &none &none &none &none &none       &none &none &none &none
+                              &none &none &none &none       &none &none
           >;
         };
         extra_layer {
