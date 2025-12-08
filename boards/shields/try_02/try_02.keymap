@@ -11,7 +11,8 @@
 #define NUM   5
 #define FUN   6
 #define BTH   7
-#define EXTRA 8
+#define BOOT  8
+#define EXTRA 9
 
 / {
     combos {
