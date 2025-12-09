@@ -21,8 +21,10 @@
       #binding-cells = <2>;
       tapping-term-ms = <280>;
       quick-tap-ms = <175>;
+      require-prior-idle-ms = <150>;
       flavor = "balanced";
       bindings = <&kp>, <&kp>;
+      hold-trigger-on-release;
     };
   };
   combos {
@@ -32,6 +34,7 @@
       key-positions = <4 5>;
       bindings = <&to BTH>;
       layers = <BASE>;
+      require-prior-idle-ms = <300>;
     };
     combo_exit_bth {
       timeout-ms = <50>;
@@ -44,6 +47,7 @@
       key-positions = <0 9>;
       bindings = <&to BOOT>;
       layers = <BASE>;
+      require-prior-idle-ms = <300>;
     };
     combo_exit_boot {
       timeout-ms = <50>;
@@ -56,6 +60,7 @@
       key-positions = <2 7>;
       bindings = <&to EXTRA>;
       layers = <BASE>;
+      require-prior-idle-ms = <300>;
     };
     combo_exit_extra {
       timeout-ms = <50>;
