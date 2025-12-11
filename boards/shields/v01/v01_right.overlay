@@ -19,7 +19,3 @@
     , <&pro_micro 16 GPIO_ACTIVE_HIGH>  // Rightest Column
     ;
 };
-
-&nice_view_spi {
-    cs-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
-};
