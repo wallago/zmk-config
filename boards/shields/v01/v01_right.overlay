@@ -1,5 +1,9 @@
 #include "./v01.dtsi"
 
+&nice_view_spi {
+    cs-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+};
+
 &default_transform {
     col-offset = <5>;
 };
