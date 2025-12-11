@@ -3,3 +3,6 @@ config SHIELD_V01_LEFT
 
 config SHIELD_V01_RIGHT
     def_bool $(shields_list_contains,v01_right)
+
+config SHIELD_V01_NICEVIEW_CS
+    def_bool $(shields_list_contains,v01_niceview_cs)
