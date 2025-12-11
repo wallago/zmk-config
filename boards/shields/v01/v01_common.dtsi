@@ -5,13 +5,13 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "./try_02-layouts.dtsi"
+#include "./v01-layouts.dtsi"
 
 / {
     chosen {
         zephyr,display = &nice_view_spi;
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &splitkb_try_02_5col_layout;
+        zmk,physical-layout = &splitkb_5col_layout;
     };
 
     kscan0: kscan {

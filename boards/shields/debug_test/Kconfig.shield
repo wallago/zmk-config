@@ -1,2 +1,0 @@
-config SHIELD_DEBUG_TEST
-    def_bool $(shields_list_contains,debug_test)

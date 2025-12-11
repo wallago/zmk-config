@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    splitkb_try_02_5col_layout: splitkb_try_02_5col_layout {
+    splitkb_5col_layout: splitkb_5col_layout {
         compatible = "zmk,physical-layout";
         display-name = "5 Column";
 
@@ -53,13 +53,13 @@
             ;
     };
 
-    splitkb_try_02_position_map {
+    splitkb_position_map {
         compatible = "zmk,physical-layout-position-map";
 
         complete;
 
         thirtysix {
-            physical-layout = <&splitkb_try_02_5col_layout>;
+            physical-layout = <&splitkb_5col_layout>;
             positions
                 = < 0  1  2  3  4     5  6  7  8  9>
                 , <10 11 12 13 14    15 16 17 18 19>

@@ -1,6 +1,6 @@
-#include "./try_02_common.dtsi"
+#include "./v01_common.dtsi"
 
-&splitkb_try_02_5col_layout {
+&splitkb_5col_layout {
     transform = <&default_transform>;
 };
 

@@ -1,16 +1,14 @@
 if SHIELD_TRY_02_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Try 02"
+    default "01"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
-
 endif
 
-if SHIELD_TRY_02_LEFT || SHIELD_TRY_02_RIGHT
+if SHIELD_V01_LEFT || SHIELD_v01_RIGHT
 
 config ZMK_SPLIT
     default y
-
 endif
