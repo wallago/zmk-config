@@ -1,13 +1,13 @@
-if SHIELD_V01_LEFT
+if SHIELD_CHOCOFI_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "01"
+    default "chocofi"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 endif
 
-if SHIELD_V01_LEFT || SHIELD_V01_RIGHT
+if SHIELD_CHOCOFI_LEFT || SHIELD_CHOCOFI_RIGHT
 
 config ZMK_SPLIT
     default y
