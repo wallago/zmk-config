@@ -4,10 +4,6 @@ name: chocofi
 type: shield
 url:
 requires: [pro_micro]
-exposes: [i2c_oled]
-features:
-  - keys
-  - studio
 siblings:
   - chocofi_left
   - chocofi_right
