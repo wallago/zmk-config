@@ -9,7 +9,6 @@ on:
   schedule:
     - cron: "0 0 * * 0"
 jobs:
-  build:
   commit-format:
     name: Commit format
     runs-on: ubuntu-latest
