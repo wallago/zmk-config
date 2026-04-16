@@ -13,8 +13,7 @@
 #define NUM   5
 #define FUN   6
 #define BTH   7
-#define BOOT  8
-#define EXTRA 9
+#define EXTRA 8
 
 / {
   behaviors {
@@ -47,15 +46,16 @@
     combo_boot {
       timeout-ms = <50>;
       key-positions = <0 9>;
-      bindings = <&to BOOT>;
+      bindings = <&bootloader>;
       layers = <BASE>;
       require-prior-idle-ms = <300>;
     };
-    combo_exit_boot {
+    combo_studio {
       timeout-ms = <50>;
-      key-positions = <3 6>;
-      bindings = <&to BASE>;
-      layers = <BOOT>;
+      key-positions = <20 29>;
+      bindings = <&studio_unlock>;
+      layers = <BASE>;
+      require-prior-idle-ms = <300>;
     };
     combo_extra {
       timeout-ms = <50>;
@@ -143,15 +143,6 @@
         &none      &none        &none        &none        &none        &none            &none           &none &none &none
         &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none            &none           &none &none &none
                                 &none        &bt BT_PRV   &bt BT_NXT   &rgb_ug RGB_TOG  &rgb_ug RGB_BRI &rgb_ug RGB_BRD
-      >;
-    };
-    boot_layer {
-      label = "BOOT";
-      bindings = <
-        &none &none &none &none &bootloader &bootloader &none &none &none &none
-        &none &none &none &none &none       &none       &none &none &none &none
-        &none &none &none &none &none       &none       &none &none &none &none
-                    &none &none &none       &none       &none &none
       >;
     };
     extra_layer {
