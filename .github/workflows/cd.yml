@@ -20,11 +20,10 @@ jobs:
         with:
           config: cliff.toml
           args: --latest --github-repo ${{ github.repository }}
-        env:
-          OUTPUT: CHANGES.md
       - name: Create the GitHub release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          name: "Release v${{ env.RELEASE_VERSION }}"
-          body: ${{ steps.changelog.outputs.body }}
+          name: ${{ github.ref_name }}
+          body: ${{ steps.git-cliff.outputs.content }}
+          repo_token: ${{ secrets.RELEASE_TOKEN }}
