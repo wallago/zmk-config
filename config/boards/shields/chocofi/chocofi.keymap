@@ -13,8 +13,7 @@
 #define NUM   5
 #define FUN   6
 #define BTH   7
-#define BOOT  8
-#define EXTRA 9
+#define EXTRA 8
 
 / {
   behaviors {
@@ -53,7 +52,7 @@
     };
     combo_studio {
       timeout-ms = <50>;
-      key-positions = <10 20>;
+      key-positions = <20 29>;
       bindings = <&studio_unlock>;
       layers = <BASE>;
       require-prior-idle-ms = <300>;

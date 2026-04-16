@@ -59,16 +59,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1775710090,
-        "narHash": "sha256-ar3rofg+awPB8QXDaFJhJ2jJhu+KqN/PRCXeyuXR76E=",
+        "lastModified": 1776067740,
+        "narHash": "sha256-B35lpsqnSZwn1Lmz06BpwF7atPgFmUgw1l8KAV3zpVQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "4c1018dae018162ec878d42fec712642d214fdfa",
+        "rev": "7e495b747b51f95ae15e74377c5ce1fe69c1765f",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "ref": "nixos-25.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -101,22 +101,6 @@
       "original": {
         "owner": "NixOS",
         "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1758277210,
-        "narHash": "sha256-iCGWf/LTy+aY0zFu8q12lK8KuZp7yvdhStehhyX1v8w=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "8eaee110344796db060382e15d3af0a9fc396e0e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -169,6 +153,7 @@
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
         "project-banner": "project-banner",
+        "zephyr": "zephyr",
         "zephyr-nix": "zephyr-nix"
       }
     },
@@ -223,16 +208,15 @@
     "zephyr": {
       "flake": false,
       "locked": {
-        "lastModified": 1752880629,
-        "narHash": "sha256-N5VgJMYJZCgTe3Qj59KVynxD0Gs5+qawXkH2geWTEE0=",
-        "owner": "zephyrproject-rtos",
+        "lastModified": 1773992708,
+        "narHash": "sha256-SWB1dZ8hnF87oufDRhs37TQ47/7yn7qj/UJKeSXboZI=",
+        "owner": "zmkfirmware",
         "repo": "zephyr",
-        "rev": "413b789deb391d3a37d06b463288a5fe765ee57e",
+        "rev": "58a5874a446ace2893a196848282d271a551e512",
         "type": "github"
       },
       "original": {
-        "owner": "zephyrproject-rtos",
-        "ref": "v4.2.0",
+        "owner": "zmkfirmware",
         "repo": "zephyr",
         "type": "github"
       }
@@ -240,9 +224,13 @@
     "zephyr-nix": {
       "inputs": {
         "nix-github-actions": "nix-github-actions",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "pyproject-nix": "pyproject-nix",
-        "zephyr": "zephyr"
+        "zephyr": [
+          "zephyr"
+        ]
       },
       "locked": {
         "lastModified": 1766008436,
