@@ -53,8 +53,10 @@
               # ZMK Studio needs the protoc binary
               protobuf
 
-              # Task runner
+              # Misc
               just
+              git-cliff
+
               # Zephyr toolchain + Python env (west, pyelftools, etc.)
               zephyr.pythonEnv
               (zephyr.sdk.override { targets = [ "arm-zephyr-eabi" ]; })
