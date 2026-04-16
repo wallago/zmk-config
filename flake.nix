@@ -1,12 +1,18 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     flake-utils.url = "github:numtide/flake-utils";
     project-banner.url = "github:wallago/project-banner?dir=nix";
 
-    # Zephyr sdk and toolchain
+    zephyr = {
+      url = "github:zmkfirmware/zephyr";
+      flake = false;
+    };
+
     zephyr-nix = {
       url = "github:urob/zephyr-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.zephyr.follows = "zephyr";
     };
   };
 
@@ -21,31 +27,42 @@
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs {
+          inherit system;
+        };
         zephyr = zephyr-nix.packages.${system};
+        extraPython = pkgs.python314.withPackages (
+          ps: with ps; [
+            pyelftools
+            protobuf
+            setuptools
+          ]
+        );
       in
       {
         devShells = {
           default = pkgs.mkShell {
-            buildInputs =
-              with pkgs;
-              [
-                cmake
-                ninja
-                dtc
-                python313Packages.setuptools
-                python313Packages.pyelftools
-                python313Packages.protobuf
-                protobuf
-              ]
-              ++ [
-                zephyr.sdk
-                zephyr.pythonEnv
-              ];
+            buildInputs = with pkgs; [
+              # Build tools not in the SDK
+              cmake
+              ninja
+              dtc
+              protobuf
+              keymap-drawer
+
+              # ZMK Studio needs the protoc binary
+              protobuf
+
+              # Task runner
+              just
+              # Zephyr toolchain + Python env (west, pyelftools, etc.)
+              zephyr.pythonEnv
+              (zephyr.sdk.override { targets = [ "arm-zephyr-eabi" ]; })
+            ];
+            env = {
+              PYTHONPATH = "${zephyr.pythonEnv}/${zephyr.pythonEnv.sitePackages}:${extraPython}/${extraPython.sitePackages}";
+            };
             shellHook = ''
-              export CMAKE_PREFIX_PATH=$PWD/zephyr/share/zephyr-package/cmake
-              export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
-              export GNUARMEMB_TOOLCHAIN_PATH=${pkgs.gcc-arm-embedded-13}
               ${project-banner.packages.${system}.default}/bin/project-banner \
                 --owner "wallago" \
                 --logo " 󰖌 " \
