@@ -59,7 +59,7 @@
 
               # Zephyr toolchain + Python env (west, pyelftools, etc.)
               zephyr.pythonEnv
-              (zephyr.sdk.override { targets = [ "arm-zephyr-eabi" ]; })
+              (zephyr.sdk-0_16.override { targets = [ "arm-zephyr-eabi" ]; })
             ];
             env = {
               PYTHONPATH = "${zephyr.pythonEnv}/${zephyr.pythonEnv.sitePackages}:${extraPython}/${extraPython.sitePackages}";
